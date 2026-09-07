@@ -1,0 +1,17 @@
+{
+  "name": "kayworks",
+  "version": "1.0.0",
+  "private": true,
+  "description": "KayWorks V1 — a lightweight personal app hub and launcher for local-first web projects.",
+  "scripts": {
+    "serve": "node scripts/serve-static.js",
+    "check:assets": "node scripts/asset-integrity.js",
+    "check:js": "node --check Public/js/app.js && node --check Public/sw.js && node --check scripts/asset-integrity.js && node --check scripts/release-audit.js && node --check scripts/serve-static.js && node --check Tests/site.test.js",
+    "test": "node --test Tests/*.test.js",
+    "audit": "node scripts/release-audit.js",
+    "check": "npm run check:assets && npm run check:js && npm test && npm run audit"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

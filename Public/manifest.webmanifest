@@ -1,0 +1,26 @@
+{
+  "id": "./",
+  "name": "KayWorks",
+  "short_name": "KayWorks",
+  "description": "A launcher for small, useful KayWorks web applications.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#080b18",
+  "theme_color": "#080b18",
+  "orientation": "any",
+  "icons": [
+    {
+      "src": "assets/raccoon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "assets/raccoon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
