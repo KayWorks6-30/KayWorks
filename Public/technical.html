@@ -1,1 +1,33 @@
-<!doctype html><meta charset="utf-8"><title>Technical — KayWorks</title><meta http-equiv="refresh" content="0;url=index.html#technical"><script>location.replace('index.html#technical');</script><p><a href="index.html#technical">Open KayWorks Technical</a></p>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta name="theme-color" content="#080b16"><meta name="color-scheme" content="dark"><meta name="description" content="How KayWorks apps generally work and how they are built."><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="KayWorks">
+  <title>Technical — KayWorks</title><link rel="manifest" href="manifest.webmanifest"><link rel="icon" type="image/svg+xml" href="assets/raccoon-mark.svg"><link rel="apple-touch-icon" href="assets/apple-touch-icon.png"><link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a><header class="site-header"><div class="nav-shell"><a class="brand" href="index.html"><img src="assets/raccoon-mark.svg" alt=""><span>KayWorks</span></a><button class="nav-toggle" type="button" aria-expanded="false" aria-controls="siteNav" aria-label="Open navigation"><span></span><span></span><span></span></button><nav class="site-nav" id="siteNav" aria-label="Primary navigation"><a href="index.html">Home</a><a href="apps.html">Apps</a><a href="lab.html">Lab</a><a href="about.html">About</a><a class="active" aria-current="page" href="technical.html">Technical</a></nav></div></header>
+<main id="main" class="page">
+  <header class="page-head"><div class="kicker">Technical</div><h1>How the apps work.</h1><p class="lede">There is a real structure behind the projects, but the basic idea is pretty simple: use the lightest setup that can do the job reliably.</p></header>
+
+  <section class="section-block" style="margin-top:0">
+    <div class="section-row"><div><h2>From the user side</h2></div><p>The technical choices mostly exist so the app can stay easy to use.</p></div>
+    <div class="cards-3">
+      <article class="tech-card"><h3>No account unless it is needed</h3><p>Most KayWorks apps do not need a KayWorks login. If an app can remember its own state locally, I would rather leave it at that.</p></article>
+      <article class="tech-card"><h3>Local-first data</h3><p>Where it makes sense, personal data stays in browser storage on your device instead of being sent to a central KayWorks database.</p></article>
+      <article class="tech-card"><h3>Backups matter</h3><p>Local data can still be lost if browser storage is cleared or a device disappears. Apps with meaningful history should give you a way to export and restore it.</p></article>
+    </div>
+    <div class="privacy-callout"><strong>Local-first is a design choice, not a magic security claim.</strong><p>Your data staying on your device avoids building one big database of everyone’s information. It does not make the data invulnerable, which is why backups are important.</p></div>
+  </section>
+
+  <section class="section-block">
+    <div class="section-row"><div><h2>Under the hood</h2></div><p>Money Tracker is the first KayWorks app big enough to need a more formal structure.</p></div>
+    <div class="cards-2">
+      <article class="tech-card"><h3>Keep the layers understandable</h3><p>UI code should deal with the interface. Financial or other domain logic should work without depending on the screen. Storage should have a clear boundary instead of being scattered everywhere.</p><div class="tech-flow"><span>UI</span><b>→</b><span>domain / data</span><b>→</b><span>persistence</span></div></article>
+      <article class="tech-card"><h3>AI interprets; the app decides</h3><p>AI can be useful for turning messy text into structured input. Important calculations and stored behavior should still be validated and handled deterministically by the application.</p><div class="tech-flow"><span>input</span><b>→</b><span>AI / parser</span><b>→</b><span>validation</span><b>→</b><span>app logic</span></div></article>
+      <article class="tech-card"><h3>Static is fine</h3><p>HTML, CSS, JavaScript, browser APIs, and static hosting cover a surprising amount. I do not add a backend or framework just so the project looks more “serious.”</p></article>
+      <article class="tech-card"><h3>Structure should match the app</h3><p>A tiny utility should stay tiny. A larger app can grow data, domain, parser, UI, test, and release layers when those boundaries actually make the project easier to maintain.</p></article>
+    </div>
+  </section>
+</main>
+<footer class="site-footer"><div class="footer-inner"><a class="brand" href="index.html"><img src="assets/raccoon-mark.svg" alt=""><span>KayWorks</span></a><span>Enough engineering to be reliable. Not enough to become a hobby by itself.</span><button class="install-link" data-install-guide type="button">Home Screen guide</button></div></footer>
+<dialog id="installDialog"><div class="dialog-body"><div class="dialog-head"><div><div class="kicker">Home Screen</div><h2>Keep KayWorks one tap away.</h2></div><button class="dialog-close" type="button" aria-label="Close">×</button></div><p>On iPhone, open <strong>kayworks.dev</strong> in Safari, tap Share, then choose <strong>Add to Home Screen</strong>.</p></div></dialog><script src="js/app.js" defer></script></body></html>

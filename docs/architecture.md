@@ -1,16 +1,16 @@
-# KayWorks V2.2 architecture
+# KayWorks V2 architecture
 
-KayWorks is intentionally a small static application shell.
+KayWorks is intentionally a small static site.
 
 ```text
 Public/
-  index.html              all primary KayWorks views
-  apps.html               legacy redirect -> #apps
-  lab.html                legacy redirect -> #lab
-  about.html              legacy redirect -> #home
-  technical.html          legacy redirect -> #technical
+  index.html
+  apps.html
+  lab.html
+  about.html
+  technical.html
   css/app.css
-  js/app.js               view switching, mobile navigation, install dialog
+  js/app.js
   assets/
   manifest.webmanifest
   sw.js
@@ -19,9 +19,7 @@ scripts/
 docs/
 ```
 
-Home, Apps, Lab, and Technical behave as separate screens, but they are rendered from one HTML shell. Navigation is hash-based so a static deployment does not need route rewriting for `/apps.html` or similar URLs. Browser back/forward navigation still works through normal hash history.
-
-About is intentionally part of Home rather than a separate screen.
+Each top-level section is a real page on the same KayWorks origin. Shared CSS/JavaScript keep the experience consistent without introducing a framework or client-side router.
 
 The hub itself stores no private application data. Individual KayWorks apps remain separate origins and therefore keep separate local storage.
 

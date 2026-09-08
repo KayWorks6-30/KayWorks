@@ -2,16 +2,14 @@
 
 ## Usable app
 
-Add a finished/usable project to the `apps` view inside `Public/index.html`. Give it only a real deployment URL. If it deserves a shortcut on Home, add one there too.
+Add a real app to `Public/apps.html` only when it is ready to be used. Include its real URL, a short normal-language description, and only the metadata that helps somebody understand it.
 
-## Work in progress
-
-Add unfinished work to the `lab` view. Keep it marked as in development and do not invent a launch URL or date.
+A small Home-page shortcut is optional; do not duplicate an entire app-detail section there.
 
 ## Demo
 
-Keep demos visually and verbally separate from normal usable apps so a visitor does not mistake sample/synthetic data for a real place to keep their own information.
+Demo builds should be clearly labeled and visually separated from normal usable apps so nobody mistakes a synthetic-data demo for the place to keep real information.
 
-## Navigation
+## Work in progress
 
-Do not add new standalone HTML pages just to create another top-level KayWorks screen. Add a new `data-view-panel` and matching hash navigation entry when a genuinely new main area is needed.
+Unfinished projects belong in `Public/lab.html`. Do not invent launch domains or completion dates.

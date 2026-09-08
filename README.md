@@ -1,25 +1,19 @@
-# KayWorks V2.2
+# KayWorks V2
 
-KayWorks is the personal hub for the web apps and side projects I build and keep around because they are useful.
+KayWorks is the personal hub for a small collection of web apps I build and keep around because they are useful.
 
-V2.2 keeps the V2.1 layout and navigation intact and focuses on the site copy. Technical explanations are more direct and less concerned with defending the project choices: no branded-login language, no branded-database language, no "serious project" framing, and no launch-date commentary.
+V2 moves away from the more formal, company-style presentation of V1. The site is intentionally relaxed, compact, and direct. It also changes the hub from one long scrolling page into separate pages for Home, Apps, Lab, About, and Technical.
 
-The About content still lives directly on Home, while Home, Apps, Lab, and Technical remain views inside one application shell.
-
-## Main views
+## Pages
 
 ```text
-#home        Home + About + current highlights
-#apps        Usable apps + clearly separated demo
-#lab         Work in progress
-#technical   Local-first philosophy + architecture
+Public/
+  index.html       Home
+  apps.html        Usable apps + clearly separated demo
+  lab.html         Work in progress
+  about.html       Personal background / motivation
+  technical.html   Local-first philosophy + architecture
 ```
-
-Small `apps.html`, `lab.html`, `technical.html`, and `about.html` compatibility files remain only to redirect older links into the new views.
-
-## Logo
-
-The site now uses the supplied black-and-white raccoon-face artwork as the source for the KayWorks logo and Home Screen icons. The main Home lockup places the raccoon face above the KayWorks wordmark.
 
 ## Current apps
 
@@ -34,7 +28,6 @@ The demo is intentionally presented separately from the usable-app section and u
 - vanilla CSS
 - vanilla JavaScript
 - static hosting
-- hash-based in-page views
 - web app manifest + service worker
 - Node's built-in test runner
 
@@ -56,22 +49,26 @@ Then open `http://127.0.0.1:4173`.
 npm run check
 ```
 
-This checks local assets, JavaScript syntax, view/navigation invariants, PWA metadata, and the release/privacy audit.
+This checks local assets across every page, JavaScript syntax, site invariants, PWA metadata, and the release/privacy audit.
 
 ## Deployment
 
 Deploy the contents of `Public/` as the static site at `kayworks.dev`.
 
-No build command is required. Internal KayWorks navigation uses URL hashes (`#apps`, `#lab`, and `#technical`), so those screens do not require Cloudflare to resolve separate HTML routes.
+No build command is required.
 
 ## Adding another app
 
 When another app is genuinely usable:
 
-1. add it to the Apps view in `Public/index.html`
-2. decide whether it deserves a small Home shortcut
+1. add it to `Public/apps.html`
+2. decide whether it deserves a small Home-page shortcut
 3. add only its real deployment URL
-4. update the service worker if new local assets are introduced
+4. update `Public/sw.js` if new local page/assets are introduced
 5. run `npm run check`
 
-WIP projects belong in the Lab view until they are actually ready.
+WIP projects belong in `lab.html` until they are actually ready.
+
+## Design direction
+
+KayWorks should feel related to Money Tracker without looking like a finance dashboard or a software company landing page. V2 uses smaller desktop typography, fewer promotional phrases, normal conversational copy, and a friendlier original raccoon mark/mascot.
