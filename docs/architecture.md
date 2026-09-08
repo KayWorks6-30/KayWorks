@@ -1,8 +1,4 @@
-<<<<<<< Updated upstream
 # KayWorks V2 architecture
-=======
-# KayWorks V2.2 architecture
->>>>>>> Stashed changes
 
 KayWorks is intentionally a small static site.
 

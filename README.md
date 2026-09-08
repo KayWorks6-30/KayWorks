@@ -1,22 +1,10 @@
-<<<<<<< Updated upstream
 # KayWorks V2
-=======
-# KayWorks V2.2
->>>>>>> Stashed changes
 
 KayWorks is the personal hub for a small collection of web apps I build and keep around because they are useful.
 
-<<<<<<< Updated upstream
 V2 moves away from the more formal, company-style presentation of V1. The site is intentionally relaxed, compact, and direct. It also changes the hub from one long scrolling page into separate pages for Home, Apps, Lab, About, and Technical.
 
 ## Pages
-=======
-V2.2 keeps the V2.1 layout and navigation intact and focuses on the site copy. Technical explanations are more direct and less concerned with defending the project choices: no branded-login language, no branded-database language, no "serious project" framing, and no launch-date commentary.
-
-The About content still lives directly on Home, while Home, Apps, Lab, and Technical remain views inside one application shell.
-
-## Main views
->>>>>>> Stashed changes
 
 ```text
 Public/

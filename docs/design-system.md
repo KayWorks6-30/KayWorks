@@ -1,8 +1,4 @@
-<<<<<<< Updated upstream
 # KayWorks V2 design system
-=======
-# KayWorks V2.2 design system
->>>>>>> Stashed changes
 
 ## Tone
 
