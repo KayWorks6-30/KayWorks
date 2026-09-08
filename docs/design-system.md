@@ -1,44 +1,25 @@
-# KayWorks V1 Design System
+# KayWorks V2 design system
 
-KayWorks borrows the strongest visual ideas from the current Money Tracker interface while broadening them into a general project identity.
+## Tone
 
-## Reused family traits
+The UI should feel personal, calm, useful, and slightly playful. Avoid product-marketing slogans, startup copy, or language that sounds like a company press release.
 
-- deep navy background surfaces
-- purple as the main accent
-- restrained pink and blue secondary accents
-- rounded cards
-- subtle borders instead of heavy shadows
-- compact uppercase eyebrow labels
-- mobile-first spacing
-- strong readable hierarchy
-- sticky navigation
-- raccoon mascot
-- dark Home Screen presentation
+## Layout
 
-## Deliberate differences
+- Mobile-first.
+- Desktop width is capped around 1120px.
+- Hero text is intentionally moderate on desktop rather than billboard-sized.
+- Navigation uses separate HTML pages instead of anchor-jumping through one long document.
 
-KayWorks is not a finance dashboard. It avoids finance-specific summary cards, transaction trees, settings controls, parser forms, or app-style tab content.
+## Surfaces
 
-The hub uses larger editorial typography, project cards, launcher cards, project status treatment, and architecture diagrams instead.
+KayWorks keeps the dark navy/purple family from Money Tracker, but uses simpler cards and less dashboard-like density.
 
-## Core tokens
+## Raccoon
 
-```text
-background      #080b18
-surface         #11152a
-surface-2       #181d35
-border          #303858
-text            #f5f3ff
-secondary text  #aeb4cb
-purple          #8b5cf6
-purple-light    #c4b5fd
-pink            #ec4899
-blue            #60a5fa
-green           #4ee3a2
-yellow          #ffc857
-```
+V2 includes two original local SVG assets:
 
-## Accessibility
+- `raccoon-mark.svg` — compact navigation/PWA mark
+- `raccoon-mascot.svg` — friendly full mascot for Home/About
 
-V1 includes semantic landmarks, a skip link, keyboard-visible focus, a keyboard-operable mobile navigation, a native dialog, descriptive link labels, responsive text, high-contrast core copy, and reduced-motion handling.
+The direction is a clean, recognizable raccoon with a friendly character rather than the abstract V1 face.

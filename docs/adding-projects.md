@@ -1,26 +1,15 @@
-# Adding a KayWorks Project
+# Adding projects
 
-KayWorks is intentionally designed so adding another real application does not require redesigning the hub.
+## Usable app
 
-## When a project is still in development
+Add a real app to `Public/apps.html` only when it is ready to be used. Include its real URL, a short normal-language description, and only the metadata that helps somebody understand it.
 
-Keep it in the Lab section with:
+A small Home-page shortcut is optional; do not duplicate an entire app-detail section there.
 
-- a real project name or honest working title
-- a short problem/idea description
-- a visible WIP status
-- no fake launch URL
-- no claims for functionality that has not been built
+## Demo
 
-## When a project becomes usable
+Demo builds should be clearly labeled and visually separated from normal usable apps so nobody mistakes a synthetic-data demo for the place to keep real information.
 
-1. Move or add its card in the Apps section.
-2. Add its real URL.
-3. Add only a few useful traits/labels.
-4. Update the Project Status board.
-5. Keep the launcher focused on the most important apps rather than every experiment.
-6. Run `npm run check`.
+## Work in progress
 
-## Application data
-
-Each app owns its own local data and storage boundary. Do not create cross-subdomain localStorage assumptions in KayWorks.
+Unfinished projects belong in `Public/lab.html`. Do not invent launch domains or completion dates.

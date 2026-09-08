@@ -24,9 +24,11 @@ function collectManifestReferences(manifest) {
 }
 
 function findMissingLocalAssets() {
-  const indexPath = path.join(publicRoot, 'index.html');
+  const refs = [];
+  const htmlFiles = fs.readdirSync(publicRoot).filter(name => name.endsWith('.html'));
+  for (const file of htmlFiles) refs.push(...collectHtmlReferences(fs.readFileSync(path.join(publicRoot, file), 'utf8')));
+
   const manifestPath = path.join(publicRoot, 'manifest.webmanifest');
-  const refs = collectHtmlReferences(fs.readFileSync(indexPath, 'utf8'));
   if (fs.existsSync(manifestPath)) refs.push(...collectManifestReferences(JSON.parse(fs.readFileSync(manifestPath, 'utf8'))));
 
   const missing = [];
@@ -43,9 +45,7 @@ if (require.main === module) {
   if (missing.length) {
     for (const ref of missing) console.error(`Missing local asset: ${ref}`);
     process.exitCode = 1;
-  } else {
-    console.log('Local asset integrity check passed.');
-  }
+  } else console.log('Local asset integrity check passed.');
 }
 
 module.exports = { findMissingLocalAssets };
