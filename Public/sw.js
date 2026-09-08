@@ -1,4 +1,8 @@
+<<<<<<< Updated upstream
 const CACHE_NAME = 'kayworks-v2-shell';
+=======
+const CACHE_NAME = 'kayworks-v2-2-shell';
+>>>>>>> Stashed changes
 const SHELL = [
   './',
   'index.html',

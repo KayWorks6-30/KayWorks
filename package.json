@@ -1,6 +1,10 @@
 {
   "name": "kayworks",
+<<<<<<< Updated upstream
   "version": "2.0.0",
+=======
+  "version": "2.2.0",
+>>>>>>> Stashed changes
   "private": true,
   "description": "KayWorks V2 — a relaxed, multi-page personal app hub for local-first web projects.",
   "scripts": {
