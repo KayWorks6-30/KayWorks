@@ -1,4 +1,4 @@
-# KayWorks V2.1 design system
+# KayWorks V2.2 design system
 
 ## Tone
 

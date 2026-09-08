@@ -1,10 +1,10 @@
-# KayWorks V2.1
+# KayWorks V2.2
 
 KayWorks is the personal hub for the web apps and side projects I build and keep around because they are useful.
 
-V2.1 keeps the relaxed V2 design, but changes the internal navigation to work more like Money Tracker: Home, Apps, Lab, and Technical are views inside one application shell instead of separate server pages. That avoids deployment/router problems with URLs such as `/apps.html` while still making each area feel like its own screen.
+V2.2 keeps the V2.1 layout and navigation intact and focuses on the site copy. Technical explanations are more direct and less concerned with defending the project choices: no branded-login language, no branded-database language, no "serious project" framing, and no launch-date commentary.
 
-The About content now lives directly on Home instead of having its own navigation item.
+The About content still lives directly on Home, while Home, Apps, Lab, and Technical remain views inside one application shell.
 
 ## Main views
 

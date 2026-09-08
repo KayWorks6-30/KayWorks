@@ -40,6 +40,22 @@ test('home copy stays personal and non-corporate', () => {
   assert.doesNotMatch(home, /Available now/i);
 });
 
+
+
+test('public copy stays direct instead of defensive or over-branded', () => {
+  assert.doesNotMatch(home, /KayWorks login/i);
+  assert.doesNotMatch(home, /KayWorks database/i);
+  assert.doesNotMatch(home, /KayWorks apps?/i);
+  assert.doesNotMatch(home, /looks? more [“"]?serious/i);
+  assert.doesNotMatch(home, /fake launch dates/i);
+  assert.doesNotMatch(home, /look more official/i);
+  assert.doesNotMatch(home, /pretend something is ready/i);
+  assert.doesNotMatch(home, /reskinn/i);
+  assert.match(home, /there is usually no reason to make you create a login first/i);
+  assert.match(home, /instead of being sent to a central database/i);
+  assert.match(home, /<h3>Start simple<\/h3>/i);
+});
+
 test('Money Tracker is the usable app and demo remains clearly separate', () => {
   assert.match(home, /href="https:\/\/money\.kayworks\.dev"/);
   assert.match(home, /href="https:\/\/demo-money\.kayworks\.dev"/);
@@ -76,8 +92,8 @@ test('local asset references resolve', () => {
 });
 
 test('technical copy keeps local-first limitations accurate', () => {
-  assert.match(home, /does not make the data invulnerable/i);
-  assert.match(home, /browser storage is cleared/i);
+  assert.match(home, /clearing that browser data or losing the device/i);
+  assert.match(home, /export a backup/i);
   assert.doesNotMatch(home, /data can never be stolen/i);
 });
 
