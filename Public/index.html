@@ -44,6 +44,7 @@
         <p class="home-intro">This is where I keep the web apps I make in my free time. I build things I would actually want to use myself, clean them up when they become useful, and leave them here for anyone else who finds them useful too.</p>
         <div class="hero-actions">
           <a class="button button-primary" href="https://money.kayworks.dev">Open Money Tracker <span aria-hidden="true">↗</span></a>
+          <a class="button button-secondary" href="https://workout.kayworks.dev">Open Workout Tracker <span aria-hidden="true">↗</span></a>
           <a class="button button-secondary" href="#apps">See what’s here</a>
         </div>
       </div>
@@ -103,12 +104,12 @@
 
       <section class="section-block" aria-labelledby="nextTitle">
         <div class="section-row">
-          <div><div class="kicker">Next up</div><h2 id="nextTitle">A couple things I’m working on.</h2></div>
-          <a class="app-link" href="#lab">See the Lab →</a>
+          <div><div class="kicker">Projects</div><h2 id="nextTitle">A new app and what’s next.</h2></div>
+          <a class="app-link" href="#apps">See all apps →</a>
         </div>
         <div class="cards-2">
-          <article class="info-card"><span class="status wip"><i></i> In development</span><h3>Workout / Fitness Tracker</h3><p>A simpler way to log workouts, with AI helping turn messy notes into structured entries instead of making you fill out a pile of fields.</p></article>
-          <article class="info-card"><span class="status wip"><i></i> In development</span><h3>Ascend</h3><p>A new version of a climbing tracker I originally made as a student, rebuilt around the way I like making apps now.</p></article>
+          <article class="info-card"><span class="status"><i></i> Available</span><h3>Workout Tracker</h3><p>Log strength workouts, runs, rides, and swims without turning every session into paperwork. You can enter things manually or paste messy notes and review the structured result before saving.</p><p class="card-action"><a class="app-link" href="https://workout.kayworks.dev">Open Workout Tracker ↗</a></p></article>
+          <article class="info-card"><span class="status wip"><i></i> In development</span><h3>Ascend</h3><p>A new version of a climbing tracker I originally made as a student, rebuilt around the way I like making apps now.</p><p class="card-action"><a class="app-link" href="#lab">See the Lab →</a></p></article>
         </div>
       </section>
     </section>
@@ -135,6 +136,25 @@
         </aside>
       </section>
 
+      <section class="app-detail" aria-labelledby="workoutTitle">
+        <article class="card app-detail-main">
+          <div class="app-top"><div class="app-mark" aria-hidden="true">W</div><span class="status"><i></i> Available</span></div>
+          <h2 id="workoutTitle">Workout Tracker</h2>
+          <p>Workout Tracker is a local-first fitness app for strength sessions, reusable workouts, running, cycling, swimming, progress history, and measurable goals.</p>
+          <p>You can log everything manually, or paste rough workout notes and let AI turn them into a structured draft that you review before anything is saved. The app handles the actual math for things like volume, pace, personal records, and goal progress.</p>
+          <ul class="tags"><li>Local-first</li><li>Strength + cardio</li><li>JSON backup</li><li>AI-assisted input</li></ul>
+        </article>
+        <aside class="card app-detail-side">
+          <dl>
+            <div><dt>Data</dt><dd>Stored on your device</dd></div>
+            <div><dt>Account</dt><dd>Not required</dd></div>
+            <div><dt>Platform</dt><dd>Browser / Home Screen</dd></div>
+            <div><dt>Status</dt><dd>Usable now</dd></div>
+          </dl>
+          <a class="button button-primary" href="https://workout.kayworks.dev">Open Workout Tracker ↗</a>
+        </aside>
+      </section>
+
       <aside class="demo-card" aria-labelledby="demoTitle">
         <span class="status demo"><i></i> Demo only</span>
         <h2 id="demoTitle">Money Tracker Demo</h2>
@@ -146,10 +166,6 @@
     <section class="app-view page" data-view-panel="lab" aria-labelledby="labTitle" hidden>
       <header class="page-head"><div class="kicker">Lab</div><h1 id="labTitle">Stuff I’m working on.</h1><p class="lede">This is where I keep projects that are still taking shape. Some will turn into finished apps, some may change a lot along the way.</p></header>
       <section class="lab-grid">
-        <article class="lab-card">
-          <div class="lab-icon" aria-hidden="true">↗</div>
-          <div><span class="status wip"><i></i> In development</span><h2>Workout / Fitness Tracker</h2><p>I want workout logging to feel less like filling out paperwork. The main idea is that you can paste a plan or type messy notes and let AI turn that into structured exercises, sets, reps, weight, and sessions.</p><p class="lab-note">The app itself will still own the real math: volume, progression, personal records, workout frequency, and history. Nutrition may fit later, but I’m not counting it as a feature yet.</p></div>
-        </article>
         <article class="lab-card">
           <div class="lab-icon" aria-hidden="true">▲</div>
           <div><span class="status wip"><i></i> In development</span><h2>Ascend</h2><p>Ascend is a climbing tracker I originally made as a student. I want to revisit it now with a cleaner interface, better history, and the same local-first approach I use for newer apps.</p><p class="lab-note">The direction includes sessions, climbs, grades, attempts, sends, flashes, projects, and progression. The old project gives me a useful starting point for rebuilding it around the way I make apps now.</p></div>

@@ -155,6 +155,7 @@ p { color: var(--muted); }
 .info-card, .lab-card, .tech-card { padding: 22px; }
 .info-card h3, .lab-card h3, .tech-card h3 { margin-bottom: 8px; }
 .info-card p, .lab-card p, .tech-card p { margin-bottom: 0; }
+.info-card .card-action { margin-top: 16px; }
 
 .about-home-grid { display: grid; grid-template-columns: 1.35fr .65fr; gap: 18px; }
 .about-copy { padding: 25px; }
@@ -169,6 +170,7 @@ p { color: var(--muted); }
 .small-note { margin: 18px 0 0; color: var(--quiet); font-size: .9rem; }
 
 .app-detail { display: grid; grid-template-columns: 1.1fr .9fr; gap: 18px; align-items: stretch; }
+.app-detail + .app-detail { margin-top: 28px; }
 .app-detail-main, .app-detail-side { padding: 26px; }
 .app-detail-main h2 { margin: 18px 0 10px; }
 .tags { display: flex; flex-wrap: wrap; gap: 8px; padding: 0; margin: 18px 0 0; list-style: none; }

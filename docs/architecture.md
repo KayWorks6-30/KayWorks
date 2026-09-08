@@ -1,4 +1,4 @@
-# KayWorks V2.2 architecture
+# KayWorks V2.3 architecture
 
 KayWorks is intentionally a small static application shell.
 

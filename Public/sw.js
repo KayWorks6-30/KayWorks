@@ -1,4 +1,4 @@
-const CACHE_NAME = 'kayworks-v2-2-shell';
+const CACHE_NAME = 'kayworks-v2-3-shell';
 const SHELL = [
   './',
   'index.html',

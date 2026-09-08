@@ -56,17 +56,21 @@ test('public copy stays direct instead of defensive or over-branded', () => {
   assert.match(home, /<h3>Start simple<\/h3>/i);
 });
 
-test('Money Tracker is the usable app and demo remains clearly separate', () => {
+test('Money Tracker and Workout Tracker are usable apps and demo remains clearly separate', () => {
   assert.match(home, /href="https:\/\/money\.kayworks\.dev"/);
+  assert.match(home, /href="https:\/\/workout\.kayworks\.dev"/);
   assert.match(home, /href="https:\/\/demo-money\.kayworks\.dev"/);
   assert.match(home, /Demo only/);
   assert.match(home, /not where you should keep your actual history/i);
 });
 
-test('WIP projects exist without fake launch domains', () => {
-  assert.match(home, /Workout \/ Fitness Tracker/);
-  assert.match(home, /Ascend/);
-  assert.match(home, /In development/);
+test('Workout Tracker is promoted out of Lab while Ascend remains WIP', () => {
+  const lab = home.split('data-view-panel="lab"')[1].split('data-view-panel="technical"')[0];
+  assert.match(home, /<h2 id="workoutTitle">Workout Tracker<\/h2>/);
+  assert.match(home, /https:\/\/workout\.kayworks\.dev/);
+  assert.doesNotMatch(lab, /Workout \/ Fitness Tracker|Workout Tracker/);
+  assert.match(lab, /Ascend/);
+  assert.match(lab, /In development/);
   assert.doesNotMatch(home, /fitness\.kayworks\.dev/);
   assert.doesNotMatch(home, /ascend\.kayworks\.dev/);
 });
