@@ -5,98 +5,188 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#080b16">
   <meta name="color-scheme" content="dark">
-  <meta name="description" content="KayWorks is the home for small web apps I build and keep around because they are useful.">
+  <meta name="description" content="KayWorks is where I keep the web apps and side projects I build for people who find them useful.">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="apple-mobile-web-app-title" content="KayWorks">
   <title>KayWorks</title>
   <link rel="manifest" href="manifest.webmanifest">
-  <link rel="icon" type="image/svg+xml" href="assets/raccoon-mark.svg">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
   <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
   <link rel="stylesheet" href="css/app.css">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
+
   <header class="site-header">
     <div class="nav-shell">
-      <a class="brand" href="index.html" aria-label="KayWorks home"><img src="assets/raccoon-mark.svg" alt="" width="34" height="34"><span>KayWorks</span></a>
+      <a class="brand" href="#home" data-nav-home aria-label="KayWorks home">
+        <span class="brand-icon"><img src="assets/favicon.png" alt=""></span>
+        <span>KayWorks</span>
+      </a>
       <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="siteNav" aria-label="Open navigation"><span></span><span></span><span></span></button>
       <nav class="site-nav" id="siteNav" aria-label="Primary navigation">
-        <a class="active" href="index.html" aria-current="page">Home</a>
-        <a href="apps.html">Apps</a>
-        <a href="lab.html">Lab</a>
-        <a href="about.html">About</a>
-        <a href="technical.html">Technical</a>
+        <a href="#home" data-nav-view="home">Home</a>
+        <a href="#apps" data-nav-view="apps">Apps</a>
+        <a href="#lab" data-nav-view="lab">Lab</a>
+        <a href="#technical" data-nav-view="technical">Technical</a>
       </nav>
     </div>
   </header>
 
-  <main id="main" class="page page-home">
-    <section class="hero" aria-labelledby="heroTitle">
-      <div class="hero-copy">
-        <div class="kicker">Personal app hub</div>
-        <h1 id="heroTitle">Kay<span>Works</span></h1>
-        <p class="lede">This is where I keep the web apps I build. Most of them start because I want a simpler way to do something, and if they end up useful to other people too, even better.</p>
+  <main id="main">
+    <section class="app-view page page-home" data-view-panel="home" aria-labelledby="homeTitle">
+      <div class="home-hero">
+        <div class="logo-lockup" aria-label="KayWorks">
+          <div class="logo-face"><img src="assets/raccoon-face-source.png" alt="Simple black and white raccoon face"></div>
+          <h1 id="homeTitle">KayWorks</h1>
+        </div>
+        <p class="home-intro">This is where I keep the web apps I make in my free time. I build things I would actually want to use myself, clean them up when they become useful, and leave them here for anyone else who finds them useful too.</p>
         <div class="hero-actions">
-          <a class="button button-primary" href="apps.html">See the apps</a>
-          <a class="button button-secondary" href="https://money.kayworks.dev">Open Money Tracker <span aria-hidden="true">↗</span></a>
+          <a class="button button-primary" href="https://money.kayworks.dev">Open Money Tracker <span aria-hidden="true">↗</span></a>
+          <a class="button button-secondary" href="#apps">See what’s here</a>
         </div>
       </div>
-      <div class="mascot-wrap" aria-label="KayWorks raccoon mascot">
-        <div class="mascot-halo" aria-hidden="true"></div>
-        <img src="assets/raccoon-mascot.svg" alt="Friendly KayWorks raccoon mascot waving">
-      </div>
+
+      <section class="home-grid" aria-label="KayWorks overview">
+        <article class="app-card">
+          <div class="app-top">
+            <div class="app-mark" aria-hidden="true">$</div>
+            <span class="status"><i></i> Available</span>
+          </div>
+          <h2>Money Tracker</h2>
+          <p>The first full app here. It keeps your finance history in your browser and helps sort out spending, income, reimbursements, recurring payments, and the other stuff that gets messy in real life.</p>
+          <a class="app-link" href="https://money.kayworks.dev">Open Money Tracker ↗</a>
+        </article>
+
+        <article class="card simple-card">
+          <div class="kicker">What this site is</div>
+          <h2>Mostly a home for things I make.</h2>
+          <p>KayWorks gives the apps one place to live, keeps track of what I’m working on, and gives me somewhere to explain how they work without turning every project into its own giant website.</p>
+          <div class="mini-links">
+            <a class="mini-link" href="#lab"><strong>What I’m working on</strong><span>Lab →</span></a>
+            <a class="mini-link" href="#technical"><strong>How I build them</strong><span>Technical →</span></a>
+          </div>
+        </article>
+      </section>
+
+      <aside class="demo-strip" aria-label="Money Tracker demo">
+        <div>
+          <strong>Money Tracker demo</strong>
+          <p>This is only for looking around. It uses made-up data so you can see the app without putting real financial information into it.</p>
+        </div>
+        <a class="button button-ghost" href="https://demo-money.kayworks.dev">Open demo ↗</a>
+      </aside>
+
+      <section class="section-block about-home" aria-labelledby="aboutTitle">
+        <div class="section-row">
+          <div><div class="kicker">About</div><h2 id="aboutTitle">Why I make these.</h2></div>
+        </div>
+        <div class="about-home-grid">
+          <article class="about-copy card">
+            <p>I like making software in my free time. Most projects start with something pretty ordinary: I want a better way to keep track of something, an existing app is doing way more than I need, or I think a small annoyance could be handled better.</p>
+            <p>Once one of those projects gets useful enough, I clean it up and keep it here. I like making things that work well and letting other people use them if they happen to fit what they need.</p>
+            <p>I tend to prefer apps that open quickly, explain themselves, and do not make you create an account unless there is a real reason for one. If data can stay on your device and still do the job, that is usually where I want it.</p>
+          </article>
+          <aside class="card about-side">
+            <h3>The basic idea</h3>
+            <ul class="plain-list">
+              <li>Keep the app easy to understand.</li>
+              <li>Do not add setup just because other apps do.</li>
+              <li>Let local data stay local when it makes sense.</li>
+              <li>Add complexity only when it actually helps.</li>
+            </ul>
+            <p class="small-note">KayWorks is just the name I use to keep all of these projects together.</p>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section-block" aria-labelledby="nextTitle">
+        <div class="section-row">
+          <div><div class="kicker">Next up</div><h2 id="nextTitle">A couple things I’m working on.</h2></div>
+          <a class="app-link" href="#lab">See the Lab →</a>
+        </div>
+        <div class="cards-2">
+          <article class="info-card"><span class="status wip"><i></i> In development</span><h3>Workout / Fitness Tracker</h3><p>A simpler way to log workouts, with AI helping turn messy notes into structured entries instead of making you fill out a pile of fields.</p></article>
+          <article class="info-card"><span class="status wip"><i></i> In development</span><h3>Ascend</h3><p>A new version of a climbing tracker I originally made as a student, rebuilt around the way I like making apps now.</p></article>
+        </div>
+      </section>
     </section>
 
-    <section class="home-grid" aria-label="KayWorks overview">
-      <article class="app-card">
-        <div class="app-top">
-          <div class="app-mark" aria-hidden="true">$</div>
-          <span class="status"><i></i> Available</span>
-        </div>
-        <h2>Money Tracker</h2>
-        <p>The first full KayWorks app. It keeps your finance history in your browser, handles the messy parts of everyday money, and gives you a way to back everything up yourself.</p>
-        <a class="app-link" href="https://money.kayworks.dev">Open Money Tracker ↗</a>
-      </article>
+    <section class="app-view page" data-view-panel="apps" aria-labelledby="appsTitle" hidden>
+      <header class="page-head"><div class="kicker">Apps</div><h1 id="appsTitle">Things you can use.</h1><p class="lede">The finished projects live here, with a separate demo if you just want to look around first.</p></header>
 
-      <aside class="card side-card">
-        <div>
-          <div class="kicker">Around here</div>
-          <h2>More than a launcher.</h2>
-          <p>I also keep notes here about what I am building, why the apps work the way they do, and the technical choices behind them.</p>
-        </div>
-        <div class="mini-links">
-          <a class="mini-link" href="lab.html"><strong>What I’m working on</strong><span>Lab →</span></a>
-          <a class="mini-link" href="about.html"><strong>Why KayWorks exists</strong><span>About →</span></a>
-          <a class="mini-link" href="technical.html"><strong>How the apps are built</strong><span>Technical →</span></a>
-        </div>
+      <section class="app-detail" aria-labelledby="moneyTitle">
+        <article class="card app-detail-main">
+          <div class="app-top"><div class="app-mark" aria-hidden="true">$</div><span class="status"><i></i> Available</span></div>
+          <h2 id="moneyTitle">Money Tracker</h2>
+          <p>Money Tracker is a local-first personal finance app for keeping track of spending, income, reimbursements, recurring payments, person-to-person payments, investments, and the stuff that usually gets messy between a bank statement and real life.</p>
+          <p>The point is not to turn budgeting into another chore. Put the information in, let the app organize it, and check the numbers when you actually want them.</p>
+          <ul class="tags"><li>Local-first</li><li>Mobile-first</li><li>JSON backup</li><li>AI-assisted input</li></ul>
+        </article>
+        <aside class="card app-detail-side">
+          <dl>
+            <div><dt>Data</dt><dd>Stored on your device</dd></div>
+            <div><dt>Account</dt><dd>Not required</dd></div>
+            <div><dt>Platform</dt><dd>Browser / Home Screen</dd></div>
+            <div><dt>Status</dt><dd>Usable now</dd></div>
+          </dl>
+          <a class="button button-primary" href="https://money.kayworks.dev">Open Money Tracker ↗</a>
+        </aside>
+      </section>
+
+      <aside class="demo-card" aria-labelledby="demoTitle">
+        <span class="status demo"><i></i> Demo only</span>
+        <h2 id="demoTitle">Money Tracker Demo</h2>
+        <p>This one is here so you can poke around without using real financial information. It runs on synthetic sample data and is not where you should keep your actual history.</p>
+        <a class="button button-ghost" href="https://demo-money.kayworks.dev">Try the demo ↗</a>
       </aside>
     </section>
 
-    <aside class="demo-strip" aria-label="Money Tracker demo">
-      <div>
-        <strong>Just want to look around first?</strong>
-        <p>The Money Tracker demo uses made-up data so you can see how it works without putting any of your own information into it.</p>
-      </div>
-      <a class="button button-ghost" href="https://demo-money.kayworks.dev">Open the demo ↗</a>
-    </aside>
+    <section class="app-view page" data-view-panel="lab" aria-labelledby="labTitle" hidden>
+      <header class="page-head"><div class="kicker">Lab</div><h1 id="labTitle">Stuff I’m working on.</h1><p class="lede">This is where I keep projects that are still taking shape. Some will turn into finished apps, some may change a lot along the way.</p></header>
+      <section class="lab-grid">
+        <article class="lab-card">
+          <div class="lab-icon" aria-hidden="true">↗</div>
+          <div><span class="status wip"><i></i> In development</span><h2>Workout / Fitness Tracker</h2><p>I want workout logging to feel less like filling out paperwork. The main idea is that you can paste a plan or type messy notes and let AI turn that into structured exercises, sets, reps, weight, and sessions.</p><p class="lab-note">The app itself will still own the real math: volume, progression, personal records, workout frequency, and history. Nutrition may fit later, but I’m not counting it as a feature yet.</p></div>
+        </article>
+        <article class="lab-card">
+          <div class="lab-icon" aria-hidden="true">▲</div>
+          <div><span class="status wip"><i></i> In development</span><h2>Ascend</h2><p>Ascend is a climbing tracker I originally made as a student. I want to revisit it now with a cleaner interface, better history, and the same local-first approach I use for newer apps.</p><p class="lab-note">The direction includes sessions, climbs, grades, attempts, sends, flashes, projects, and progression. The old project gives me a useful starting point for rebuilding it around the way I make apps now.</p></div>
+        </article>
+      </section>
+      <section class="section-block"><article class="info-card"><h3>What comes after these?</h3><p>If another small app solves a problem well enough that I keep using it, it will probably end up here too.</p></article></section>
+    </section>
 
-    <section class="section-block" aria-labelledby="nextTitle">
-      <div class="section-row">
-        <div><div class="kicker">Next up</div><h2 id="nextTitle">A couple things I’m working on.</h2></div>
-        <a class="app-link" href="lab.html">See the Lab →</a>
-      </div>
-      <div class="cards-2">
-        <article class="info-card"><span class="status wip"><i></i> In development</span><h3>Workout / Fitness Tracker</h3><p>A simpler way to log workouts, with AI helping turn messy notes into structured entries instead of making you fill out a dozen fields.</p></article>
-        <article class="info-card"><span class="status wip"><i></i> In development</span><h3>Ascend</h3><p>A new version of a climbing tracker I originally made as a student, rebuilt around the way I like making apps now.</p></article>
-      </div>
+    <section class="app-view page" data-view-panel="technical" aria-labelledby="technicalTitle" hidden>
+      <header class="page-head"><div class="kicker">Technical</div><h1 id="technicalTitle">How the apps work.</h1><p class="lede">The basic idea is simple: use the lightest setup that can do the job reliably, then add structure when the app actually needs it.</p></header>
+
+      <section class="section-block flush-top">
+        <div class="section-row"><div><h2>From the user side</h2></div><p>The technical choices mostly exist so the app can stay easy to use.</p></div>
+        <div class="cards-3">
+          <article class="tech-card"><h3>No account unless it is needed</h3><p>If an app can remember what it needs in your browser, there is usually no reason to make you create a login first.</p></article>
+          <article class="tech-card"><h3>Local-first data</h3><p>Where it makes sense, your data stays in browser storage on your device instead of being sent to a central database.</p></article>
+          <article class="tech-card"><h3>Backups matter</h3><p>Local data can still be lost if browser storage is cleared or a device disappears. Apps with meaningful history should give you a way to export and restore it.</p></article>
+        </div>
+        <div class="privacy-callout"><strong>A quick note on local data.</strong><p>If an app stores its history in your browser, clearing that browser data or losing the device can also mean losing the history. That is why apps with important data should give you a way to export a backup.</p></div>
+      </section>
+
+      <section class="section-block">
+        <div class="section-row"><div><h2>Under the hood</h2></div><p>Money Tracker is the first project here big enough to need a more structured codebase.</p></div>
+        <div class="cards-2">
+          <article class="tech-card"><h3>Keep the layers understandable</h3><p>UI code should deal with the interface. Financial or other domain logic should work without depending on the screen. Storage should have a clear boundary instead of being scattered everywhere.</p><div class="tech-flow"><span>UI</span><b>→</b><span>domain / data</span><b>→</b><span>persistence</span></div></article>
+          <article class="tech-card"><h3>AI interprets; the app decides</h3><p>AI can be useful for turning messy text into structured input. Important calculations and stored behavior should still be validated and handled deterministically by the application.</p><div class="tech-flow"><span>input</span><b>→</b><span>AI / parser</span><b>→</b><span>validation</span><b>→</b><span>app logic</span></div></article>
+          <article class="tech-card"><h3>Start simple</h3><p>HTML, CSS, JavaScript, browser APIs, and static hosting cover most of what these projects need. If a project needs more later, the setup can grow with it.</p></article>
+          <article class="tech-card"><h3>Structure should match the app</h3><p>A tiny utility should stay tiny. A larger app can grow data, domain, parser, UI, test, and release layers when those boundaries actually make the project easier to maintain.</p></article>
+        </div>
+      </section>
     </section>
   </main>
 
   <footer class="site-footer">
     <div class="footer-inner">
-      <a class="brand" href="index.html"><img src="assets/raccoon-mark.svg" alt="" width="30" height="30"><span>KayWorks</span></a>
-      <span>Built because useful software does not need to be a whole ordeal.</span>
+      <a class="brand" href="#home" aria-label="KayWorks home"><span class="brand-icon"><img src="assets/favicon.png" alt=""></span><span>KayWorks</span></a>
+      <span>Made for people who find it useful.</span>
       <button class="install-link" type="button" data-install-guide>Home Screen guide</button>
     </div>
   </footer>
@@ -105,9 +195,10 @@
     <div class="dialog-body">
       <div class="dialog-head"><div><div class="kicker">Home Screen</div><h2>Keep KayWorks one tap away.</h2></div><button class="dialog-close" type="button" aria-label="Close">×</button></div>
       <p>On iPhone, open <strong>kayworks.dev</strong> in Safari, tap Share, then choose <strong>Add to Home Screen</strong>. On Android, use Chrome’s install or Add to Home screen option.</p>
-      <p>KayWorks is only the hub. Each app still keeps its own local data on its own site.</p>
+      <p>This site is only the hub. Each app still keeps its own local data on its own site.</p>
     </div>
   </dialog>
+
   <script src="js/app.js" defer></script>
 </body>
 </html>

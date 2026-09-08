@@ -1,8 +1,8 @@
 {
   "name": "kayworks",
-  "version": "2.0.0",
+  "version": "2.2.0",
   "private": true,
-  "description": "KayWorks V2 — a relaxed, multi-page personal app hub for local-first web projects.",
+  "description": "KayWorks V2.1 \u2014 a relaxed single-shell personal app hub with in-page views and local-first project notes.",
   "scripts": {
     "serve": "node scripts/serve-static.js",
     "check:assets": "node scripts/asset-integrity.js",
