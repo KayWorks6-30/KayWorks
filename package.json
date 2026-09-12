@@ -1,8 +1,8 @@
 {
   "name": "kayworks",
-  "version": "2.3.0",
+  "version": "2.4.1",
   "private": true,
-  "description": "KayWorks V2.3 — a relaxed single-shell personal app hub with Money Tracker and Workout Tracker live.",
+  "description": "KayWorks V2.4 \u2014 a relaxed single-shell personal app hub with Money Tracker and Workout Tracker live, plus an UnWritten demo-only listing.",
   "scripts": {
     "serve": "node scripts/serve-static.js",
     "check:assets": "node scripts/asset-integrity.js",

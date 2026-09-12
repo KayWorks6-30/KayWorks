@@ -1,4 +1,4 @@
-const CACHE_NAME = 'kayworks-v2-3-shell';
+const CACHE_NAME = 'kayworks-v2-4-1-shell';
 const SHELL = [
   './',
   'index.html',
@@ -9,7 +9,8 @@ const SHELL = [
   'assets/raccoon-face-source.png',
   'assets/raccoon-192.png',
   'assets/raccoon-512.png',
-  'assets/apple-touch-icon.png'
+  'assets/apple-touch-icon.png',
+  'assets/unwritten-icon.png'
 ];
 
 self.addEventListener('install', event => {

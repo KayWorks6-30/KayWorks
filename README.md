@@ -1,8 +1,8 @@
-# KayWorks V2.3
+# KayWorks V2.4.1
 
 KayWorks is the personal hub for the web apps and side projects I build and keep around because they are useful.
 
-V2.3 promotes Workout Tracker from the Lab into the live Apps collection at `https://workout.kayworks.dev` while keeping the existing single-shell layout, Money Tracker, demo separation, and Ascend Lab entry intact.
+V2.4.1 keeps Money Tracker and Workout Tracker as the usable public apps and now links the published UnWritten sample-data demo. The private UnWritten workspace remains intentionally unlisted. The single-shell layout, Money Tracker demo separation, and Ascend Lab entry remain intact.
 
 The About content still lives directly on Home, while Home, Apps, Lab, and Technical remain views inside one application shell.
 
@@ -26,6 +26,7 @@ The site now uses the supplied black-and-white raccoon-face artwork as the sourc
 - **Money Tracker** — https://money.kayworks.dev
 - **Workout Tracker** — https://workout.kayworks.dev
 - **Money Tracker Demo** — https://demo-money.kayworks.dev
+- **UnWritten Demo** — https://demo-unwritten.kayworks.dev — sample-data/browser-local public demo; the private hosted workspace is intentionally not linked
 
 The demo is intentionally presented separately from the usable-app section and uses synthetic information.
 

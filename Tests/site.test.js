@@ -64,6 +64,18 @@ test('Money Tracker and Workout Tracker are usable apps and demo remains clearly
   assert.match(home, /not where you should keep your actual history/i);
 });
 
+
+test('UnWritten links only to the public demo and never exposes the private workspace', () => {
+  assert.match(home, /<h2 id="unwrittenTitle">UnWritten<\/h2>/);
+  assert.match(home, /UnWritten[\s\S]*Demo only/i);
+  assert.match(home, /href="https:\/\/demo-unwritten\.kayworks\.dev"/i);
+  assert.match(home, /Sample data stored in your browser/i);
+  assert.match(home, /<dt>Demo status<\/dt><dd>Live<\/dd>/i);
+  assert.doesNotMatch(home, /https:\/\/unwritten\.kayworks\.dev/i);
+  assert.doesNotMatch(home, /Public demo coming later/i);
+  assert.ok(fs.existsSync(path.join(publicRoot, 'assets', 'unwritten-icon.png')), 'missing UnWritten project icon');
+});
+
 test('Workout Tracker is promoted out of Lab while Ascend remains WIP', () => {
   const lab = home.split('data-view-panel="lab"')[1].split('data-view-panel="technical"')[0];
   assert.match(home, /<h2 id="workoutTitle">Workout Tracker<\/h2>/);
